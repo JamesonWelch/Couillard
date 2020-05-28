@@ -1,0 +1,16 @@
+Have addresses and names go through both NLTK and regex
+
+Simple regex:
+https://stackoverflow.com/questions/37745801/how-can-i-extract-address-from-raw-text-using-nltk-in-python
+
+regexp = "[0-9]{1,3} .+, .+, [A-Z]{2} [0-9]{5}"
+
+[0-9]{1,3}: 1 to 3 digits, the address number
+(space): a space between the number and the street name
+.+: street name, any character for any number of occurrences
+,: a comma and a space before the city
+.+: city, any character for any number of occurrences
+,: a comma and a space before the state
+[A-Z]{2}: exactly 2 uppercase chars from A to Z
+[0-9]{5}: 5 digits
+
